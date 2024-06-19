@@ -1,0 +1,15 @@
+scenario 1
+==================
+use database skg;
+use schema skg;
+
+create table que
+(
+id number,
+name varchar(20)
+);
+
+insert into que values(1,'Hi'),(1,'John'),(2,'Brad'),(2,'Pitt'),(2,'PR');
+
+select * from que;
+select id, listagg(name,' ') as name from que group by id; 
